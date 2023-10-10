@@ -1,35 +1,55 @@
 .button {
+    height: 40px;
+    padding: 0 24px;
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 8px;
 }
 
 .disabled {
+    opacity: 0.5;
+    color: hsla(210, 100%, 18%, 1);
+
 }
 
 .secondary {
+    background: transparent;
+    color: hsla(210, 100%, 40%, 1);
+    border: 1px solid hsla(210, 100%, 40%, 1);;
 }
 
 .default {
+    background: hsla(210, 100%, 40%, 1);
 }
 
 .red {
+    background: hsla(348, 82%, 44%, 1);
 }
 
 .default:hover {
+    background: hsla(210, 100%, 50%, 1);
 }
 
 .red:hover {
+    background: hsla(348, 100%, 55%, 1);
 }
 
 .secondary:hover {
+    background: hsla(209, 68%, 94%, 1)
 }
 
 
 .default:active {
+    background: hsla(210, 100%, 35%, 1);
 }
 
 .secondary:active {
+    background: hsla(209, 100%, 89%, 1);
 }
 
 .red:active {
+    background: hsla(348, 82%, 38%, 1);
 }
 
 .button:disabled {
