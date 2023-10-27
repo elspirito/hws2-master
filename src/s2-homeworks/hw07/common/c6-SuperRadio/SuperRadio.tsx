@@ -6,6 +6,7 @@ import React, {
 } from 'react'
 import s from './SuperRadio.module.css'
 import {selectOptions} from "@testing-library/user-event/dist/select-options";
+import {log} from "util";
 
 type DefaultRadioPropsType = DetailedHTMLProps<
     InputHTMLAttributes<HTMLInputElement>,
@@ -37,8 +38,9 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
                                                    }) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         // делают студенты
+        console.log(e.currentTarget.value)
         if (onChangeOption) {
-            onChangeOption(e.currentTarget.value)
+            onChangeOption(Number(e.currentTarget.value))
         }
         if (onChange) {
             onChange(e)
@@ -49,20 +51,23 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
     const spanClassName = s.span + (spanProps?.className ? ' ' + spanProps.className : '')
 
     const mappedOptions: any[] = options
-        ? options.map((o) => (
-            <label key={name + '-' + o.id} className={s.label}>
+        ? options.map((o) => {
+            console.log(o.id)
+            // console.log(value)
+          return  <label key={name + '-' + o.id} className={s.label}>
                 <input
                     id={id + '-input-' + o.id}
                     className={finalRadioClassName}
                     type={'radio'}
                     // name, checked, value делают студенты
                     value={o.id}
-                    checked={o.id === value}
+                    checked={o.id == value}
                     name={name}
 
                     onChange={onChangeCallback}
                     {...restProps}
                 />
+
                 <span
                     id={id + '-span-' + o.id}
                     {...spanProps}
@@ -71,7 +76,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
                       {o.value}
                   </span>
             </label>
-        ))
+        })
         : []
 
     return <div className={s.options}>{mappedOptions}</div>
