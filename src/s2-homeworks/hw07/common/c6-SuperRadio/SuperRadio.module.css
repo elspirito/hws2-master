@@ -1,15 +1,44 @@
 .radio {
+    flex-direction: column;
+    background: #fff;
+    border-radius: 50%; /* Получение круга*/
+    vertical-align: text-top; /* Выравнивание кнопки по центру*/
+
 }
 
 .radio::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: hsla(220, 43%, 96%, 1);
+    border-radius: 50%;
+    border: 1px solid hsla(220, 43%, 92%, 1);
+    transition: all 300ms ease-in-out;
 }
 
-
 .radio:checked::before {
+    content: '';
+    display: inline-block;
+    background: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    border: 6px solid hsla(210, 100%, 40%, 1);
 }
 
 .label {
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
 
 .options {
+}
+
+input[type='radio'] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
