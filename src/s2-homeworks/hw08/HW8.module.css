@@ -1,6 +1,6 @@
 .item {
     border-bottom: 1px solid #efefef;
-    line-height: 2rem;
+
     &:hover {
         background-color: #fafafa;
     }
@@ -27,17 +27,16 @@
 
 .thead {
     background-color: #efefef;
-    line-height: 2rem;
+    /*padding: 32px;*/
 }
 
 .nameCol {
     min-width: 10rem;
     width: 50%;
-    padding: 8px;
+    padding: 12px;
 }
 
 .ageCol {
     min-width: 10rem;
     width: 50%;
-    padding: 8px;
 }
