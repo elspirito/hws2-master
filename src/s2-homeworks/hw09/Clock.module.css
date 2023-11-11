@@ -1,14 +1,28 @@
 .buttonsContainer {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+
+    & > button {
+        cursor: pointer;
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
 }
 
 .clock {
 }
 
 .watch {
+    font-size: 24px;
 }
 
 .watch strong {
 }
 
 .more {
+    color: #84848b;
+    line-height: 1;
 }
