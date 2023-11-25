@@ -1,8 +1,18 @@
 .container {
+    width: 300px;
 }
 
 .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
 }
 
 .number {
+    font-weight: bold;
+}
+.number:last-child {
+    position: absolute;
+    right: -40px
 }
