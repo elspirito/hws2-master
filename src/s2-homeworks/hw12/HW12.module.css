@@ -1,16 +1,19 @@
 [data-theme='1'] {
     --color: #000000;
-    --background: #FFFFFF;
+    --background: #fafafa;
+    --hw: #FFFFFF;
 }
 
 [data-theme='2'] {
     --color: #000000;
     --background: #DDEEFF;
+    --hw: #f3f8ff;
 }
 
 [data-theme='3'] {
     --color: #FFFFFF;
     --background: #212A34;
+    --hw: #374350;
 }
 
 html {
