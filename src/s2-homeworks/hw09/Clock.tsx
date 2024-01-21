@@ -14,7 +14,6 @@ function Clock() {
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
         let temp = setInterval(() => {
             setDate(new Date())
-            console.log(date)
         }, 1000)
         setTimerId(Number(temp))
 
